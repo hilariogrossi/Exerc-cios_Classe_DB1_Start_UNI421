@@ -1,6 +1,0 @@
-# Escreva uma classe em Python que leia dois números e implemente uma exponenciação.
-
-class Exponeciação:
-    def elevação(numero_1=1, numero_2=1):
-        resposta = numero_1 ** numero_2
-        return resposta
