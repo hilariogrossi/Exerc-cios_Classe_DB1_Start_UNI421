@@ -1,0 +1,25 @@
+# Escreva uma classe em Python para converter um
+# número romano em um número inteiro.
+
+class Reverção:
+    def transformação(string):
+        Dicionário_Conversão = \
+            {
+                'I': 1, 'IV': 4, 'V': 5, 'IX': 9, 'X': 10, 'XL': 40, 'L': 50,
+                'XC': 90, 'C': 100, 'CD': 400, 'D': 500, 'CM': 900, 'M': 1000
+            }
+
+        soma = 0
+
+        for w in range(len(string)):
+            valor = Dicionário_Conversão[string[w]]
+
+            if w + 1 < len(string) and Dicionário_Conversão[string[w + 1]] > valor:
+                soma -= valor
+            else:
+                soma += valor
+
+        print('=' * 65)
+        print(f'\033[32mA conversão do algarismo romano {string} equivale a\033[m \033[31m'
+              f'{soma}.\033[m'.center(80))
+        print('=' * 65)
