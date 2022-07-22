@@ -1,0 +1,19 @@
+# Escreva uma classe em Python que possua 2 métodos,
+# um chamado adicionar_string e outro chamado
+# inverter_string. O primeiro método deverá receber uma
+# string como parâmetro e armazená-la em um array. O
+# segundo, deverá listar as strings invertidas no seu
+# conteúdo e também, na sua ordem de inclusão.
+palavra = []
+class String:
+
+    def adicionar_string(string):
+        palavra.append(string)
+        print('=' * 50)
+        print(f'A palavra digitada foi "\033[31m{palavra}\033[m"!'.center(50))
+        print('=' * 50)
+
+    def inverter_string(string):
+        for i in palavra:
+            print(f'A palavra invertida ficou assim: "\033[31m{i[::-1]}\033[m"'.center(50))
+            print('=' * 50)
