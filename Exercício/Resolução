@@ -1,0 +1,8 @@
+from Exercício_3_UNI421.Banco_de_Dados import Exponeciação
+
+numero_1 = int(input('Digite a base da exponenciação: '))
+numero_2 = int(input('Digite o expoente da exponenciação: '))
+
+print('=' * 50)
+print(f'O número {numero_1} elevado a {numero_2} é igual a {Exponeciação.elevação(numero_1, numero_2)}'.center(50))
+print('=' * 50)
