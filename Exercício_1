@@ -1,0 +1,61 @@
+# Escreva uma classe em Python para converter um número inteiro em um numeral romano.
+import math
+
+class Conversão:
+    def transformação(numero=1):
+        if numero == 0:
+            print('=' * 75)
+            print(f'\033[31mO número digitado {numero} NÃO tem representação em algarismos romanos.\033[m'.center(80))
+            print('=' * 75)
+            exit()
+        else:
+            Números = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000]
+            Algarismos_Romanos = ['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CD',
+                                  'D', 'CM', 'M']
+
+            Dicionário_Conversão = \
+                {
+                    Números[0]: Algarismos_Romanos[0],
+                    Números[1]: Algarismos_Romanos[1],
+                    Números[2]: Algarismos_Romanos[2],
+                    Números[3]: Algarismos_Romanos[3],
+                    Números[4]: Algarismos_Romanos[4],
+                    Números[5]: Algarismos_Romanos[5],
+                    Números[6]: Algarismos_Romanos[6],
+                    Números[7]: Algarismos_Romanos[7],
+                    Números[8]: Algarismos_Romanos[8],
+                    Números[9]: Algarismos_Romanos[9],
+                    Números[10]: Algarismos_Romanos[10],
+                    Números[11]: Algarismos_Romanos[11],
+                    Números[12]: Algarismos_Romanos[12],
+
+                }
+
+            divisor = 1
+            while numero >= divisor:
+                divisor *= 10
+            divisor /= 10
+
+            resposta = ''
+            while numero:
+                Último_Número = int(numero / divisor)
+
+                if Último_Número <= 3:
+                    resposta += (Dicionário_Conversão[divisor] * Último_Número)
+                elif Último_Número == 4:
+                    resposta += (Dicionário_Conversão[divisor] + Dicionário_Conversão[divisor * 5])
+                elif 5 <= Último_Número <= 8:
+                    resposta += (Dicionário_Conversão[divisor * 5] +
+                                 (Dicionário_Conversão[divisor] * (Último_Número - 5)))
+                elif Último_Número == 9:
+                    resposta += (Dicionário_Conversão[divisor] + Dicionário_Conversão[divisor * 10])
+
+                numero = math.floor(numero % divisor)
+                divisor /= 10
+            return  resposta
+
+
+    número = int(input('Digite o número a ser convertido em algarismo romano: '))
+    print('\033[35m=\033[m' * 80)
+    print(f'\033[36mA conversão do número "{número}" em algarismo romano é:\033[m \033[35m'.center(75) + str(transformação(número)))
+    print('=' * 80)
