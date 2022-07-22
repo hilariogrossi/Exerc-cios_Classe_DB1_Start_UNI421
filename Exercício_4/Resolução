@@ -1,0 +1,9 @@
+from Exercício_4_UNI421.Banco_de_Dados import String
+
+frase = str(input('Digite a palavra a ser invertida: '))
+
+if frase.isalpha():
+    String.adicionar_string(frase)
+    String.inverter_string(frase)
+else:
+    print("ERRO de tipo! O programa esperava uma String!")
