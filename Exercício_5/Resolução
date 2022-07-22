@@ -1,0 +1,7 @@
+from Exercício_5_UNI421.Banco_de_Dados import Estudante
+
+identidade = str(input('Digite a identidade o aluno: '))
+nome = str(input('Digite o nome do aluno: '))
+classe = str(input('Digite a classe a que o aluno pertence: '))
+
+Estudante.identificação(identidade, nome, classe)
