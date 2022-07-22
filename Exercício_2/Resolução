@@ -1,0 +1,7 @@
+from Exercício_2_UNI421.Banco_de_Dados import *
+
+algarismo = str(input('Digite o algarismo romano para conversão em números: ')).upper().strip()
+if algarismo.isalpha():
+    Reverção.transformação(algarismo)
+else:
+    print("ERRO de tipo! O programa esperava uma String!")
