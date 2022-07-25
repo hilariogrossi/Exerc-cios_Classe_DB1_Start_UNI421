@@ -1,0 +1,7 @@
+from Exercício_7_UNI421.Banco_de_Dados import Triângulo
+
+ângulo_1 = int(input('Digite o 1° ângulo para construção do triângulo: '))
+ângulo_2 = int(input('Digite o 2° ângulo para construção do triângulo: '))
+ângulo_3 = int(input('Digite o 3° ângulo para construção do triângulo: '))
+
+Triângulo.check_ângulo(ângulo_1, ângulo_2, ângulo_3)
