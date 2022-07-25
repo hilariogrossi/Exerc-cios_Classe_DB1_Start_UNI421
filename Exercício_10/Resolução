@@ -1,0 +1,15 @@
+from Exercício_10_UNI421.Banco_de_Dados import JatoMilitar1Lugar
+
+modelo = str(input('Qual é o nome da aeronave? '))
+base = str(input('Onde a aeronave está localizada? '))
+nome_piloto = str(input('Qual será o piloto? '))
+base_nova = str(input('Para onde a aeronave será transportada? '))
+
+JatoMilitar1Lugar.__str__(modelo, base)
+JatoMilitar1Lugar.designar_piloto(nome_piloto, modelo)
+JatoMilitar1Lugar.rebasear_aeronave(base_nova, nome_piloto, base)
+
+print(f'A aeronave {modelo} saiu da base localizada no(a) {base} pilotada pelo piloto {nome_piloto},')
+print(f'cujo nome consta na lista de autorizados a pilotá-la e seguiu para a nova base localizada')
+print(f' no(a) {base_nova}.')
+print('=' * 100)
