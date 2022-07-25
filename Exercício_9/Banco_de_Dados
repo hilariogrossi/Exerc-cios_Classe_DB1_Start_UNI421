@@ -1,0 +1,17 @@
+# Criar uma classe chamada Ponto3D que herde de Object. Na classe Ponto3D,
+# crie um construtor que receba 3 numeros, e armezene-os em 3 variáveis.
+# Crie uma forma para que ao exibir o conteúdo da instancia,
+# a informação apresenta seja: (<num1>, <num2>, <num3>).
+# Uso: ponto = Ponto3D(1, 2, 3) / Print(ponto) => (1, 2, 3)
+
+class Ponto(object):
+    número_1 = []
+    número_2 = []
+    número_3 = []
+
+class Ponto3D(Ponto):
+    def números(num_1, num_2, num_3):
+        Ponto.número_1.append(num_1)
+        Ponto.número_2.append(num_2)
+        Ponto.número_3.append(num_3)
+        return Ponto.número_1, Ponto.número_2, Ponto.número_3
