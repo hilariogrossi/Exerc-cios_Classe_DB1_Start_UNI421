@@ -1,0 +1,10 @@
+from Exercício_6_UNI421.Banco_de_Dados import Estudante
+
+Identidade = int(input('Digite a identidade: '))
+Nome = str(input('Digite o nome: '))
+Classe = str(input('Digite a classe: '))
+
+Aluno = Estudante(Identidade, Nome, Classe)
+
+
+print(Aluno.__dict__)
