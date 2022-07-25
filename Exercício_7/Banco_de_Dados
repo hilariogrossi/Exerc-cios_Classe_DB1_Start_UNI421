@@ -1,0 +1,23 @@
+# Instanciar a classe Triangulo e imprimir os lados informados e imprimir se o triângulo é um triângulo ou não.
+# O método check_angulo deverá retornar True se a soma dos valores for igual a 180 e False em qualquer outra possibilidade;
+
+class Triângulo:
+    def __int__(self, ângulo_1, ângulo_2, ângulo_3):
+        self.ângulo_1 = ângulo_1
+        self.ângulo_2 = ângulo_2
+        self.ângulo_3 = ângulo_3
+
+    def check_ângulo(ângulo_1, ângulo_2, ângulo_3):
+        print('=' * 70)
+        print(f'\033[35mOs ângulos do triângulo são:\033[m \033[31m{ângulo_1}°, {ângulo_2}°, {ângulo_3}°.\033[m'.center(80))
+
+        if (ângulo_1 + ângulo_2 + ângulo_3) == 180:
+            print('=' * 70)
+            print(f'\033[34mCom esses ângulos teremos um triângulo.\033[m'.center(70))
+            print('=' * 70)
+            return True
+        else:
+            print('=' * 70)
+            print(f'\033[31mCom esses ângulos NÃO teremos um triângulo.\033[m'.center(70))
+            print('=' * 70)
+            return False
