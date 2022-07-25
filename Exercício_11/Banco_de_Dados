@@ -1,0 +1,50 @@
+# Criar uma classe que representará outro tipo de aeronave militar,
+# com o nome JatoMilitar2Lugares. O método construtor deverá receber duas informações:
+# o modelo, e a base onde a aeronave está; Cria um método chamado designar_piloto que
+# deverá contar o nome do piloto. Por regra, o primeiro piloto será considerado o piloto principal
+# e o segundo, o seu copiloto. Depois de informados os dois nomes, não poderá ser inserido
+# mais nenhum nome. Criar um método rebasear_aeronave, que receberá como parâmetro
+# o nome da base para onde a aeronave deverá ser enviada. Antes de registrar, é necessário
+# validar se dois pilotos foram designados para a aeronave, e somente se ambos tiverem
+# sido designados, registrar o rebaseamento, com a data e hora da movimentação.
+# Ação Sobrescreva o métod __str__ da classe, para imprimir o seguinte conteúdo:
+# Jato: <NOME DA AERONAVE> Base inicial: <NOME DA BASE DE ORIGEM>
+# Piloto: <NOME DOS PILOTOS DESIGNADOS>
+# Histórico de transferências: <LISTAGEM DAS BASES PELAS QUAIS A AERONAVE
+# PASSOU MOSTRANDO A DATA / HORA E BASE>
+from datetime import datetime
+agora = datetime.now()
+
+class JatoMilitar2Lugares:
+    def __str__(modelo, base):
+        print('=' * 100)
+        print(f'\033[36mO modelo da aeronave é o(a) {modelo} e está localizado(a) na(o) base {base}.\033[m')
+
+    def designar_piloto(piloto, co_piloto, modelo, base):
+        lista_piloto = ['João', 'Manuel', 'Fernanda', 'Tiana']
+        lista_co_piloto = ['Maria', 'Ana', 'Sebastião', 'Francisco']
+        if piloto not in lista_piloto:
+            print('=' * 100)
+            print(f'\033[1;31mA aeronave {modelo} não poderá sair da base {base},')
+            print(f'pois o(a) Piloto Principal "{piloto}" não consta na lista de autorizados.\033[m')
+            print('\033[1;33mVIAGEM NÃO AUTORIZADA!\033[m')
+            exit()
+        elif co_piloto not in lista_co_piloto:
+            print('=' * 100)
+            print(f'\033[1;31mA aeronave {modelo} não poderá sair da base {base}, pois o(a) ')
+            print(f'Co-Piloto {co_piloto} não consta na lista de autorizados.\033[m')
+            print('\033[1;33mVIAGEM NÃO AUTORIZADA!\033[m')
+            exit()
+        else:
+            print('=' * 100)
+            print(f'\033[1;34mO(A) Piloto Principal {piloto} e o(a) Co-Piloto {co_piloto}'
+                  f' estão autorizados a seguir viagem.\033[m')
+            print(f'\033[31mData Saída: {agora.day}/{agora.month}/{agora.year} e Hora Saída:'
+                  f' {agora.hour}:{agora.minute}:{agora.second}.\033[m')
+            print('=' * 100)
+
+    def rebasear_aeronave(nova_base, modelo, base):
+        print(f'\033[1;34mA aeronave {modelo} saiu da base {base} para a nova base {nova_base}.\033[m')
+        print(f'\033[31mData Chegada: {agora.day + 1}/{agora.month}/{agora.year} e'
+              f' Hora Chegada: {agora.hour - 1}:{agora.minute}:{agora.second}.\033[m')
+        print('=' * 100)
