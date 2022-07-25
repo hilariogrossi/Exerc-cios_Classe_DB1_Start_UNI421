@@ -1,0 +1,11 @@
+from Exercício_11_UNI421.Banco_de_Dados import *
+
+aeronave = str(input('Digite o nome da aeronave: ')) # Caça Mortal
+base = str(input('Digite a base de origem: ')) # Rio de Janeiro
+piloto = str(input('Digite o nome do(a) Piloto: ')) # Fernanda
+co_piloto = str(input('Digite o nome da Co-Piloto: ')) # Ana
+nova_base = str(input('Digite o destino da aeronave: '))
+
+JatoMilitar2Lugares.__str__(aeronave, base)
+JatoMilitar2Lugares.designar_piloto(piloto, co_piloto, aeronave, base)
+JatoMilitar2Lugares.rebasear_aeronave(nova_base, aeronave, base)
