@@ -1,0 +1,4 @@
+from Exercício_9_UNI421.Banco_de_Dados import Ponto3D
+
+ponto = Ponto3D.números(1, 2, 3)
+print(ponto)
