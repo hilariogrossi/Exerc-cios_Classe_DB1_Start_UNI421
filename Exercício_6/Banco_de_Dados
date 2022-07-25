@@ -1,0 +1,7 @@
+# Utilizando a classe criada no exercício 5, imprima o tipo da classe, as chaves e valores do atributo __dict__.
+
+class Estudante:
+    def __init__(self, Identidade, Nome, Classe):
+        self.Identidade = Identidade
+        self.Nome = Nome
+        self.Classe = Classe
